@@ -1,7 +1,6 @@
-import Image from 'next/image';
-import Card, { Author, Category, Font } from '@/components/card/Card';
 import React from 'react';
-
+import { Author, Category, Font } from '@/components/card/Card';
+import CardList from '@/components/cardList/CardList';
 
 const author: Author = {
     name: 'Author name',
@@ -16,30 +15,41 @@ const category: Category = {
         'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8',
     id: 1,
 };
-const font: Font = {
-    id: 1,
-    name: 'Font name',
-    description: 'Font description',
-    thumbnail:
-        'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8',
-    author,
-    slug: 'font-slug',
-    category,
-    createdAt: '2021-10-10',
-    isVietnamese: true,
-    detailImages: [
-        'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8',
-        'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8',
-    ],
-    downloadLink: 'https://picsum.photos/200/300',
-    linkDrive: 'https://picsum.photos/200/300',
-};
+
+const fonts: Font[] = [];
+let isVietnamese = true;
+Array(32)
+    .fill(null)
+    .forEach((_, i) => {
+        isVietnamese = !isVietnamese;
+        const newFont = {
+            id: i + 1,
+            name: `NVN Azkia ${i + 1}`,
+            description:
+                'Font Azkia là một font Scrip mới được thiết kế bởi Mikrojihad. Font Azkia có một phong cách đơn giản, dễ đọc và hoàn hảo cho các dự án thiết kế của bạn.',
+            thumbnail:
+                'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8',
+            author,
+            slug: `font-slug-${i + 1}`,
+            category,
+            createdAt: '2021-10-10',
+            isVietnamese,
+            detailImages: [
+                'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8',
+                'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8',
+            ],
+            downloadLink: 'https://picsum.photos/200/300',
+            linkDrive: 'https://picsum.photos/200/300',
+        };
+
+        fonts.push(newFont);
+    });
 
 function Home() {
     return (
-        <main>
+        <main className="container mx-auto ">
             Xin chào
-            <Card font={font} />
+            <CardList fonts={fonts} />
         </main>
     );
 }

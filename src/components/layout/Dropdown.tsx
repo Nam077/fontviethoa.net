@@ -1,10 +1,11 @@
-"use client";
-import icons from '@/utils/icons';
+'use client';
+
 import { useState } from 'react';
+import icons from '@/utils/icons';
 
 const { RiArrowDownSLine } = icons;
 
-const Dropdown = () => {
+function Dropdown() {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => {
@@ -34,6 +35,6 @@ const Dropdown = () => {
             )}
         </div>
     );
-};
+}
 
 export default Dropdown;

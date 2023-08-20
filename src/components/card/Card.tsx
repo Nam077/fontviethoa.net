@@ -36,17 +36,23 @@ export interface CardProps {
 function Card(props: CardProps) {
     const { font } = props;
     return (
-        <div className="flex-1 bg-white p-[10px] rounded-xl max-w-[400px] shadow-md">
+        <div className="flex-1 bg-white p-[20px] rounded-xl max-w-[400px] shadow-md">
             <div className="relative w-full h-[190px]">
-                <Image
-                    src={font.thumbnail}
-                    alt="Picture of the author"
-                    layout="fill"
-                    className="object-cover rounded-md"
-                />
+                <Link href={`/font/${font.slug}`}>
+                    <Image
+                        src={font.thumbnail}
+                        alt="Picture of the author"
+                        layout="fill"
+                        className="object-cover rounded-md"
+                    />
+                </Link>
             </div>
             <div className="flex items-center justify-between mt-4">
-                <div className="text-sm font-medium inline-flex items-center gap-1 px-2 py-0.5 rounded-lg shadow-sm bg-yellow-300">
+                <div
+                    className={`text-sm font-medium inline-flex items-center gap-1 px-2 py-0.5 rounded-lg shadow-sm ${
+                        font.isVietnamese ? 'bg-green-300' : 'bg-red-300'
+                    }`}
+                >
                     {font.isVietnamese ? 'Việt hoá' : 'Font Quốc tế'}
                 </div>
                 <div className="text-sm font-medium inline-flex items-center gap-1 px-2 py-0.5 rounded-lg shadow-sm bg-blue-300">
@@ -54,8 +60,10 @@ function Card(props: CardProps) {
                 </div>
             </div>
             <div className="py-3">
-                <h5 className="text-xl font-semibold capitalize line-clamp-1 space-y-0">{font.name}</h5>
-                <p className="text-gray-500 text-sm line-clamp-2 mt-3">{font.description}</p>
+                <Link href={`/font/${font.slug}`}>
+                    <h5 className="text-xl font-semibold capitalize line-clamp-1 space-y-0">{font.name}</h5>
+                </Link>
+                <p className="text-gray-500 text-sm line-clamp-3 mt-3">{font.description}</p>
             </div>
             <div className="py-3 px-4 bg-gray-100 rounded-xl flex items-center justify-between">
                 <div className="flex items-center gap-3">
