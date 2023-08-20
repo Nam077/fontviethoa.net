@@ -28,7 +28,7 @@ Array(32)
             description:
                 'Font Azkia là một font Scrip mới được thiết kế bởi Mikrojihad. Font Azkia có một phong cách đơn giản, dễ đọc và hoàn hảo cho các dự án thiết kế của bạn.',
             thumbnail:
-                'https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8',
+                'https://i0.wp.com/ifonts.xyz/wp-content/uploads/2018/01/azkia-script.png?resize=580%2C387&ssl=1',
             author,
             slug: `font-slug-${i + 1}`,
             category,
