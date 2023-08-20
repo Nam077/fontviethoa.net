@@ -1,11 +1,13 @@
 import { Card } from '@/components/Card';
 import Image from 'next/image';
 
-export default function Home() {
+const Home = () => {
     return (
         <main>
             Xin chào
             <Card />
         </main>
     );
-}
+};
+
+export default Home;
