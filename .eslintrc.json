@@ -45,6 +45,8 @@
                 "ts": "never",
                 "tsx": "never"
             }
+
+
         ],
         "import/no-unresolved": "off", // TypeScript takes care of this
         "react/react-in-jsx-scope": "off", // Not needed in Next.js
@@ -54,10 +56,14 @@
         "import/prefer-default-export": "off"
     },
     "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
         "import/resolver": {
-            "node": {
-                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            "typescript": {
+                "alwaysTryTypes": true
             }
         }
+
     }
 }

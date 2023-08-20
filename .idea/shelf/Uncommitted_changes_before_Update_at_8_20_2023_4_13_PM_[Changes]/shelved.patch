@@ -1,0 +1,115 @@
+Index: src/components/Card/Card.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import Image from 'next/image';\r\nimport React from 'react';\r\nimport icons from '@/utils/icons';\r\n\r\nconst { RiFileDownloadLine } = icons;\r\n\r\nconst Card = () => {\r\n    return (\r\n        <div className=\"flex-1 bg-white p-[10px] rounded-xl max-w-[400px] shadow-md\">\r\n            <div className=\"relative w-full h-[190px]\">\r\n                <Image\r\n                    src=\"https://images.unsplash.com/photo-1614624532983-4ce03382d63d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80\"\r\n                    alt=\"Picture of the author\"\r\n                    layout=\"fill\"\r\n                    className=\"object-cover rounded-md\"\r\n                />\r\n            </div>\r\n            <div className=\"flex items-center justify-between my-2\">\r\n                <div className=\"text-sm font-medium inline-flex items-center gap-1 px-2 rounded-full border border-gray-200 bg-yellow-300\">\r\n                    Việt hóa\r\n                </div>\r\n                <div className=\"text-sm font-medium inline-flex items-center gap-1 px-2 rounded-full border border-gray-200 bg-blue-300\">\r\n                    Serif\r\n                </div>\r\n            </div>\r\n            <div className=\"py-2\">\r\n                <h5 className=\"text-xl font-semibold capitalize line-clamp-1\">\r\n                    How to choose the right laptop for programming\r\n                </h5>\r\n                <p className=\"text-gray-500 text-sm line-clamp-2 mt-3\">\r\n                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Quisquam, voluptatum.\r\n                </p>\r\n            </div>\r\n            <div className=\"py-3 px-4 bg-gray-100 rounded-xl flex items-center justify-between\">\r\n                <div className=\"flex items-center gap-3\">\r\n                    <div className=\"relative w-11 h-11 rounded-xl\">\r\n                        <Image\r\n                            src=\"https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80\"\r\n                            alt=\"Picture of the author\"\r\n                            layout=\"fill\"\r\n                            className=\"object-cover rounded-xl\"\r\n                        />\r\n                    </div>\r\n                    <div className=\"flex flex-col text-sm\">\r\n                        <span className=\"font-semibold\">Font việt hóa NVN</span>\r\n                        <span className=\"text-xs text-gray-600\">20/08/2023</span>\r\n                    </div>\r\n                </div>\r\n                <button>\r\n                    <RiFileDownloadLine className=\"text-gray-600 text-2xl hover:text-blue-500 transition-color duration-300 ease-in-out\" />\r\n                </button>\r\n            </div>\r\n        </div>\r\n    );\r\n};\r\n\r\nexport default Card;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/components/Card/Card.tsx b/src/components/Card/Card.tsx
+--- a/src/components/Card/Card.tsx	(revision 1b186bad52b8128f1ff63009503c6e78b215e1d4)
++++ b/src/components/Card/Card.tsx	(date 1692522672821)
+@@ -4,7 +4,7 @@
+ 
+ const { RiFileDownloadLine } = icons;
+ 
+-const Card = () => {
++function Card() {
+     return (
+         <div className="flex-1 bg-white p-[10px] rounded-xl max-w-[400px] shadow-md">
+             <div className="relative w-full h-[190px]">
+@@ -16,10 +16,10 @@
+                 />
+             </div>
+             <div className="flex items-center justify-between my-2">
+-                <div className="text-sm font-medium inline-flex items-center gap-1 px-2 rounded-full border border-gray-200 bg-yellow-300">
++                <div className="text-sm font-medium inline-flex items-center gap-1 px-2 border border-gray-200 bg-green-300  rounded-[4px]">
+                     Việt hóa
+                 </div>
+-                <div className="text-sm font-medium inline-flex items-center gap-1 px-2 rounded-full border border-gray-200 bg-blue-300">
++                <div className="text-sm font-medium inline-flex items-center gap-1 px-2  border border-gray-200 bg-blue-300 rounded-[4px]">
+                     Serif
+                 </div>
+             </div>
+@@ -52,6 +52,6 @@
+             </div>
+         </div>
+     );
+-};
++}
+ 
+ export default Card;
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f48844f5-3af5-4365-88dc-23836782c29b\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/package.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/package.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pnpm-lock.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pnpm-lock.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/app/posts/[slug]/page.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/posts/[slug]/page.tsx\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"TypeScript File\" />\r\n        <option value=\"TypeScript JSX File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2TuR5jKvCdvYVMaOV7vBbuqT68r\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"last_opened_file_path\": \"G:/TypeScript/chatbot/nvn-chatbot-v4\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.standard\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.standard\": \"\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"yarn\",\r\n    \"settings.editor.selected.configurable\": \"settings.javascript.linters.eslint\",\r\n    \"ts.external.directory.path\": \"G:\\\\nvnfont\\\\front-end\\\\node_modules\\\\typescript\\\\lib\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"G:\\nvnfont\\front-end\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"dev\" type=\"js.build_tools.npm\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\r\n      <command value=\"run\" />\r\n      <scripts>\r\n        <script value=\"dev\" />\r\n      </scripts>\r\n      <node-interpreter value=\"project\" />\r\n      <package-manager value=\"npm\" />\r\n      <envs />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"npm.dev\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f48844f5-3af5-4365-88dc-23836782c29b\" name=\"Changes\" comment=\"\" />\r\n      <created>1691890797756</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1691890797756</updated>\r\n      <workItem from=\"1691890805410\" duration=\"755000\" />\r\n      <workItem from=\"1691891605190\" duration=\"1655000\" />\r\n      <workItem from=\"1691893316833\" duration=\"1686000\" />\r\n      <workItem from=\"1691895076631\" duration=\"209000\" />\r\n      <workItem from=\"1691895313828\" duration=\"110000\" />\r\n      <workItem from=\"1691895490781\" duration=\"183000\" />\r\n      <workItem from=\"1691895713450\" duration=\"262000\" />\r\n      <workItem from=\"1691896078700\" duration=\"649000\" />\r\n      <workItem from=\"1691896762773\" duration=\"631000\" />\r\n      <workItem from=\"1691897431225\" duration=\"1181000\" />\r\n      <workItem from=\"1691898648550\" duration=\"1260000\" />\r\n      <workItem from=\"1691899978030\" duration=\"2454000\" />\r\n      <workItem from=\"1691902794235\" duration=\"72000\" />\r\n      <workItem from=\"1691902905189\" duration=\"1971000\" />\r\n      <workItem from=\"1692067259155\" duration=\"167000\" />\r\n      <workItem from=\"1692493544061\" duration=\"2010000\" />\r\n      <workItem from=\"1692495773558\" duration=\"277000\" />\r\n      <workItem from=\"1692496086851\" duration=\"53000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1b186bad52b8128f1ff63009503c6e78b215e1d4)
++++ b/.idea/workspace.xml	(date 1692522673101)
+@@ -6,9 +6,7 @@
+   <component name="ChangeListManager">
+     <list default="true" id="f48844f5-3af5-4365-88dc-23836782c29b" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/posts/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/posts/[slug]/page.tsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.tsx" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -37,25 +35,25 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "master",
+-    "last_opened_file_path": "G:/TypeScript/chatbot/nvn-chatbot-v4",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.standard": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.standard": "",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "yarn",
+-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+-    "ts.external.directory.path": "G:\\nvnfont\\front-end\\node_modules\\typescript\\lib",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;last_opened_file_path&quot;: &quot;G:/TypeScript/chatbot/nvn-chatbot-v4&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
++    &quot;ts.external.directory.path&quot;: &quot;G:\\nvnfont\\front-end\\node_modules\\typescript\\lib&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="G:\nvnfont\front-end" />
+@@ -104,7 +102,8 @@
+       <workItem from="1692067259155" duration="167000" />
+       <workItem from="1692493544061" duration="2010000" />
+       <workItem from="1692495773558" duration="277000" />
+-      <workItem from="1692496086851" duration="53000" />
++      <workItem from="1692496086851" duration="1308000" />
++      <workItem from="1692521787127" duration="864000" />
+     </task>
+     <servers />
+   </component>
