@@ -2,7 +2,7 @@ import React from 'react';
 
 interface PageProps {
     params: {
-        slug: string;
+            slug: string;
     };
 }
 
