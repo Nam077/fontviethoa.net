@@ -15,16 +15,16 @@ const Card = () => {
                     className="object-cover rounded-md"
                 />
             </div>
-            <div className="flex items-center justify-between my-2">
-                <div className="text-sm font-medium inline-flex items-center gap-1 px-2 rounded-full border border-gray-200 bg-yellow-300">
+            <div className="flex items-center justify-between mt-4">
+                <div className="text-sm font-medium inline-flex items-center gap-1 px-2 py-0.5 rounded-lg shadow-sm bg-yellow-300">
                     Việt hóa
                 </div>
-                <div className="text-sm font-medium inline-flex items-center gap-1 px-2 rounded-full border border-gray-200 bg-blue-300">
+                <div className="text-sm font-medium inline-flex items-center gap-1 px-2 py-0.5 rounded-lg shadow-sm bg-blue-300">
                     Serif
                 </div>
             </div>
-            <div className="py-2">
-                <h5 className="text-xl font-semibold capitalize line-clamp-1">
+            <div className="py-3">
+                <h5 className="text-xl font-semibold capitalize line-clamp-1 space-y-0">
                     How to choose the right laptop for programming
                 </h5>
                 <p className="text-gray-500 text-sm line-clamp-2 mt-3">
