@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import { Card } from '@/components/Card';
-import { Author, Category, Font } from '@/components/Card/Card';
+import Card, { Author, Category, Font } from '@/components/card/Card';
+import React from 'react';
+
 
 const author: Author = {
     name: 'Author name',
@@ -33,6 +34,7 @@ const font: Font = {
     downloadLink: 'https://picsum.photos/200/300',
     linkDrive: 'https://picsum.photos/200/300',
 };
+
 function Home() {
     return (
         <main>
