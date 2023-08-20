@@ -1,13 +1,13 @@
-import { Card } from '@/components/Card';
 import Image from 'next/image';
+import { Card } from '../components/card';
 
-const Home = () => {
+function Home() {
     return (
         <main>
             Xin chào
             <Card />
         </main>
     );
-};
+}
 
 export default Home;
