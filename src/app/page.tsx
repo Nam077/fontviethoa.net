@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Card, { Author, Category, Font } from '@/components/card/Card';
 import React from 'react';
-
+import Card, { Author, Category, Font } from '@/components/card/Card';
+import { Search } from '@/components/commons';
 
 const author: Author = {
     name: 'Author name',
@@ -38,8 +38,19 @@ const font: Font = {
 function Home() {
     return (
         <main>
-            Xin chào
-            <Card font={font} />
+            <div className="max-w-[1200px] w-full mx-auto">
+                <div className="my-10">
+                    <Search />
+                </div>
+                <div className="grid grid-cols-4 gap-5">
+                    <Card font={font} />
+                    <Card font={font} />
+                    <Card font={font} />
+                    <Card font={font} />
+                    <Card font={font} />
+                    <Card font={font} />
+                </div>
+            </div>
         </main>
     );
 }
