@@ -36,7 +36,7 @@ export interface CardProps {
 function Card(props: CardProps) {
     const { font } = props;
     return (
-        <div className="flex-1 bg-white p-[10px] rounded-xl max-w-[400px] shadow-md">
+        <div className=" bg-white p-[10px] rounded-xl w-full shadow-md">
             <div className="relative w-full h-[190px]">
                 <Image
                     src={font.thumbnail}

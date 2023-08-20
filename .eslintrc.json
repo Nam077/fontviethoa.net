@@ -20,16 +20,14 @@
             "tsx": true
         }
     },
-    "plugins": [
-        "import",
-        "jsx-a11y",
-        "react",
-        "react-hooks",
-        "@typescript-eslint",
-        "prettier"
-    ],
+    "plugins": ["import", "jsx-a11y", "react", "react-hooks", "@typescript-eslint", "prettier"],
     "rules": {
-        "prettier/prettier": "error",
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
         "no-console": "error",
         "react/require-default-props": "off",
         "@typescript-eslint/no-explicit-any": "error",
@@ -45,8 +43,6 @@
                 "ts": "never",
                 "tsx": "never"
             }
-
-
         ],
         "import/no-unresolved": "off", // TypeScript takes care of this
         "react/react-in-jsx-scope": "off", // Not needed in Next.js
@@ -54,6 +50,7 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "import/prefer-default-export": "off"
+        // "linebreak-style": ["error", "windows"]
     },
     "settings": {
         "import/parsers": {
@@ -64,7 +61,5 @@
                 "alwaysTryTypes": true
             }
         }
-
     }
-
 }

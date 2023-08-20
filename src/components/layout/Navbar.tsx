@@ -6,7 +6,7 @@ import Dropdown from './Dropdown';
 
 const { RiArrowDownSLine } = icons;
 
-const Navbar = () => {
+function Navbar() {
     return (
         <div>
             <div className="max-w-[1200px] mx-auto py-3 flex items-center justify-between">
@@ -19,12 +19,14 @@ const Navbar = () => {
                 <div className="flex items-center gap-4">
                     <Link href={paths.LOGIN}>Đăng nhập</Link>
                     <Link href={paths.REGISTER}>
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded-md">Tạo tài khoản</button>
+                        <button type="button" className="bg-blue-500 text-white px-4 py-2 rounded-md">
+                            Tạo tài khoản
+                        </button>
                     </Link>
                 </div>
             </div>
         </div>
     );
-};
+}
 
 export default Navbar;

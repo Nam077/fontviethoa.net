@@ -1,6 +1,7 @@
-"use client";
-import icons from '@/utils/icons';
+'use client';
+
 import { useState } from 'react';
+import icons from '@/utils/icons';
 
 const { RiArrowDownSLine } = icons;
 
@@ -21,7 +22,7 @@ const Dropdown = () => {
                 Phân loại <RiArrowDownSLine className="text-base" />
             </span>
             {isHovered && (
-                <div className="absolute bg-white flex flex-col gap-2 p-3 rounded-xl w-[200px]">
+                <div className="absolute bg-white flex flex-col gap-2 p-3 rounded-xl w-[200px] shadow-xl z-10">
                     <span>Việt hóa</span>
                     <span>Việt hóa</span>
                     <span>Việt hóa</span>
@@ -34,6 +35,6 @@ const Dropdown = () => {
             )}
         </div>
     );
-};
+}
 
 export default Dropdown;
