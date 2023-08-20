@@ -1,15 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
 import { paths } from '@/utils/paths';
-import icons from '@/utils/icons';
 import Dropdown from './Dropdown';
-
-const { RiArrowDownSLine } = icons;
 
 function Navbar() {
     return (
         <div>
-            <div className="max-w-[1200px] mx-auto py-3 flex items-center justify-between">
+            <div className="container py-3 flex items-center justify-between">
                 <div className="flex items-center gap-10">
                     <Link href={paths.HOME} className="font-bold text-xl">
                         Font Việt Hóa
