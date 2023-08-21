@@ -21,7 +21,7 @@ export interface Font {
     name: string;
     description: string;
     thumbnail: string;
-    author?: Author;
+    author: Author;
     slug: string;
     category: Category;
     isVietnamese: boolean;
@@ -55,13 +55,13 @@ function Card(props: CardProps) {
             </div>
             <div className="py-3">
                 <h5 className="text-xl font-semibold capitalize line-clamp-1 space-y-0">{font.name}</h5>
-                <p className="text-gray-500 text-sm line-clamp-2 mt-3">{font.description}</p>
+                <p className="text-gray-500 text-sm line-clamp-3 mt-3">{font.description}</p>
             </div>
-            <div className="py-3 px-4 bg-gray-100 rounded-xl flex items-center justify-between">
+            <div className="py-3 px-4 bg-gray-100 rounded-xl flex items-center justify-between mt-3">
                 <div className="flex items-center gap-3">
                     <div className="relative w-11 h-11 rounded-xl">
                         <Image
-                            src="https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+                            src={font.author?.avatar}
                             alt="Picture of the author"
                             layout="fill"
                             className="object-cover rounded-xl"
