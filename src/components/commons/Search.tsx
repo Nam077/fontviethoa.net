@@ -11,7 +11,7 @@ function Search() {
                 placeholder="Search"
                 className="w-full px-4 py-3 bg-transparent outline-none text-gray-600"
             />
-            <span className="text-2xl p-3">
+            <span className="text-2xl p-3 text-gray-700">
                 <RiSearch2Line />
             </span>
         </div>
