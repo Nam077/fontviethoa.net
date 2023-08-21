@@ -12,6 +12,6 @@
 }
 
 .container {
-    @apply max-w-[1600px] w-full mx-auto;
+    @apply px-2 lg:px-0 xl:max-w-[1200px] 2xl:max-w-[1600px] w-full mx-auto;
 }
 
