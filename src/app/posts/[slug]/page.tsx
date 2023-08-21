@@ -6,8 +6,8 @@ interface PageProps {
     };
 }
 
-function Page({ params }: PageProps) {
+const Page = ({ params }: PageProps) => {
     return <div>My Post: {params.slug}</div>;
-}
+};
 
 export default Page;

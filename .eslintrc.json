@@ -49,7 +49,14 @@
         "react/jsx-props-no-spreading": "off", // Allowing spread props
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "react/function-component-definition": [
+            "error",
+            {
+                "namedComponents": "arrow-function",
+                "unnamedComponents": "arrow-function"
+            }
+        ]
         // "linebreak-style": ["error", "windows"]
     },
     "settings": {

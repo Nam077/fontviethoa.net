@@ -33,7 +33,7 @@ export interface Font {
 export interface CardProps {
     font: Font;
 }
-function Card(props: CardProps) {
+const Card = (props: CardProps) => {
     const { font } = props;
     return (
         <div className=" bg-white p-[10px] rounded-xl w-full shadow-md">
@@ -78,6 +78,6 @@ function Card(props: CardProps) {
             </div>
         </div>
     );
-}
+};
 
 export default Card;

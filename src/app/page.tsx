@@ -35,7 +35,7 @@ const font: Font = {
     linkDrive: 'https://picsum.photos/200/300',
 };
 
-function Home() {
+const Home = () => {
     return (
         <main>
             <div className="">
@@ -53,6 +53,6 @@ function Home() {
             </div>
         </main>
     );
-}
+};
 
 export default Home;

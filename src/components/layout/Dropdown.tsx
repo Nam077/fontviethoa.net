@@ -5,7 +5,7 @@ import icons from '@/utils/icons';
 
 const { RiArrowDownSLine } = icons;
 
-function Dropdown() {
+const Dropdown = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => {
@@ -18,7 +18,7 @@ function Dropdown() {
 
     return (
         <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <span className="flex items-center gap-1 cursor-pointer text-gray-600">
+            <span className="flex items-center gap-1 cursor-pointer text-gray-600 font-bold hover:text-green-500 duration-300 ease-in-out transition-all">
                 Phân loại <RiArrowDownSLine className="text-base" />
             </span>
             {isHovered && (
@@ -51,6 +51,6 @@ function Dropdown() {
             )}
         </div>
     );
-}
+};
 
 export default Dropdown;

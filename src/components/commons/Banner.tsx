@@ -48,7 +48,7 @@ const categories = [
     },
 ];
 
-function Banner() {
+const Banner = () => {
     return (
         <div className='bg-[url("https://plus.unsplash.com/premium_photo-1687203673190-d39c3719123a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1228&q=80")] w-full h-[450px] object-cover object-center bg-center flex flex-col items-center justify-center relative mt-[50px]'>
             <div className="absolute inset-0 bg-black bg-opacity-30" />
@@ -71,6 +71,6 @@ function Banner() {
             </div>
         </div>
     );
-}
+};
 
 export default Banner;

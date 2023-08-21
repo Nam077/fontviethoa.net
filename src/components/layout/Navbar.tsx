@@ -3,9 +3,9 @@ import React from 'react';
 import { paths } from '@/utils/paths';
 import Dropdown from './Dropdown';
 
-function Navbar() {
+const Navbar = () => {
     return (
-        <div className="text-white fixed top-0 w-full z-50  shadow-md bg-white">
+        <div className="text-white fixed top-0 w-full z-50 bg-white px-4 py-2 shadow-xl">
             <div className="container mx-auto py-5 flex justify-between items-center">
                 {/* Logo */}
                 <Link href={paths.HOME} className="font-bold text-xl text-[#27AE60]">
@@ -34,6 +34,6 @@ function Navbar() {
             </div>
         </div>
     );
-}
+};
 
 export default Navbar;
