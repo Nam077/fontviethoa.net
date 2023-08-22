@@ -2,9 +2,33 @@
 
 import { useState } from 'react';
 import icons from '@/utils/icons';
+import { Category } from '../card/Card';
+import DropdownItem from '../commons/DropDownItem';
 
 const { RiArrowDownSLine } = icons;
-
+const categories: Category[] = [
+    {
+        id: 0,
+        name: 'Tất cả',
+        description: 'Tất cả các font chữ có trên FontVietHoa.me',
+        slug: 'tat-ca',
+        thumbnail: 'https://picsum.photos/200/300',
+    },
+    {
+        id: 1,
+        name: 'Thư pháp',
+        description: 'Tất cả các font chữ có trên FontVietHoa.me',
+        slug: 'thu-phap',
+        thumbnail: 'https://picsum.photos/200/300',
+    },
+    {
+        id: 2,
+        name: 'Chữ ký',
+        description: 'Tất cả các font chữ có trên FontVietHoa.me',
+        slug: 'chu-ky',
+        thumbnail: 'https://picsum.photos/200/300',
+    },
+];
 const Dropdown = () => {
     const [isHovered, setIsHovered] = useState(false);
 
@@ -23,30 +47,9 @@ const Dropdown = () => {
             </span>
             {isHovered && (
                 <div className="absolute bg-white flex flex-col rounded-md w-[200px] shadow-xl z-10 border border-gray-100">
-                    <span className="p-2 rounded-md text-gray-500 hover:bg-gray-100 hover:underline cursor-pointer hover:text-green-500 duration-300 ease-in-out transition-all ">
-                        Việt hóa
-                    </span>
-                    <span className="px-2 py-3 rounded-md text-gray-500 hover:bg-gray-100 hover:underline cursor-pointer hover:text-green-500 duration-300 ease-in-out transition-all ">
-                        Việt hóa
-                    </span>
-                    <span className="px-2 py-3 rounded-md text-gray-500 hover:bg-gray-100 hover:underline cursor-pointer hover:text-green-500 duration-300 ease-in-out transition-all ">
-                        Việt hóa
-                    </span>
-                    <span className="px-2 py-3 rounded-md text-gray-500 hover:bg-gray-100 hover:underline cursor-pointer hover:text-green-500 duration-300 ease-in-out transition-all ">
-                        Việt hóa
-                    </span>
-                    <span className="px-2 py-3 rounded-md text-gray-500 hover:bg-gray-100 hover:underline cursor-pointer hover:text-green-500 duration-300 ease-in-out transition-all ">
-                        Việt hóa
-                    </span>
-                    <span className="px-2 py-3 rounded-md text-gray-500 hover:bg-gray-100 hover:underline cursor-pointer hover:text-green-500 duration-300 ease-in-out transition-all ">
-                        Việt hóa
-                    </span>
-                    <span className="px-2 py-3 rounded-md text-gray-500 hover:bg-gray-100 hover:underline cursor-pointer hover:text-green-500 duration-300 ease-in-out transition-all ">
-                        Việt hóa
-                    </span>
-                    <span className="px-2 py-3 rounded-md text-gray-500 hover:bg-gray-100 hover:underline cursor-pointer hover:text-green-500 duration-300 ease-in-out transition-all ">
-                        Việt hóa
-                    </span>
+                    {categories.map((category) => (
+                        <DropdownItem key={category.id} category={category} />
+                    ))}
                 </div>
             )}
         </div>
